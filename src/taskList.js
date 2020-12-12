@@ -8,7 +8,7 @@ export default({ tasks }) => {
                 <li key={task.id} className="list-group-item">
                     <Task task={task} />
                 </li>
-            ))};
+            ))}
         </ul>
     );
 }
