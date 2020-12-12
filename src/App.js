@@ -7,10 +7,17 @@ function App() {
     {id:1, description: 'do that', done: false},
   ];
   return (
-    <div>
-      <TaskList tasks={tasks} />
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          <div className="jumbotron">
+            <h1 className="display-4">ToDo App</h1>
+          </div>
+          <TaskList tasks={tasks} />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
