@@ -1,5 +1,6 @@
 import React from 'react';
 import TaskList from './taskList.js';
+import NewTask from './newTask.js';
 
 function App() {
   const tasks = [
@@ -13,6 +14,8 @@ function App() {
           <div className="jumbotron">
             <h1 className="display-4">ToDo App</h1>
           </div>
+          <NewTask />
+          <br />
           <TaskList tasks={tasks} />
         </div>
       </div>
