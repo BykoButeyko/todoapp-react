@@ -1,7 +1,7 @@
 import React from 'react';
 import Task from './task.js'
 
-export default({ tasks }) => {
+export default({ tasks, markTaskDone }) => {
     return (
         <ul className="list-group">
             {tasks.map(task => (

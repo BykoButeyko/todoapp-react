@@ -10,6 +10,21 @@ function App() {
     setTasks(tasks => ([...tasks, {id: nextId, description, done: false}]));
     setNextId(nextId + 1);
   }
+
+  const markTaskDone = id => {
+    const newTaskList = tasks.map(task => {
+      if(task.id === id) {
+        task.done = true;
+      }
+      return task;
+    });
+    setTasks(newTaskList);
+  };
+
+  const deleteTask = id => {
+    setTasks(tasks.filter(task => task.id !== id));
+  };
+
   return (
     <div className="container">
       <div className="row">
@@ -19,7 +34,7 @@ function App() {
           </div>
           <NewTask createTask={createTask} />
           <br />
-          <TaskList tasks={tasks} />
+          <TaskList tasks={tasks} markTaskDone={markTaskDone} />
         </div>
       </div>
     </div>
