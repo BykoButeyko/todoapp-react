@@ -34,7 +34,7 @@ function App() {
           </div>
           <NewTask createTask={createTask} />
           <br />
-          <TaskList tasks={tasks} markTaskDone={markTaskDone} />
+          <TaskList tasks={tasks} markTaskDone={markTaskDone} deleteTask={deleteTask} />
         </div>
       </div>
     </div>
